@@ -1,21 +1,20 @@
 <div>
     <table>
         <tr>
-            <td>County</td>
-            <td>Sub County</td>
+            <td>Name</td>
+            <td>Population</td>
+            <td>Safety</td>
+            <td>Average</td>
         </tr>
-        <tr>
-            <td>Migori</td>
-            <td>Karungu</td>
-        </tr>
-        <tr>
-            <td>Kisumu</td>
-            <td>Nyalenda</td>
-        </tr>
-        <tr>
-            <td>Meru</td>
-            <td>Migingo</td>
-        </tr>
+        <%def Population =Population;%>
+        <g:each in="${population}" var="population">
+            <tr>
+                <td>${population.name}</td>
+                <td>${population.population}</td>
+                <td>${population.safety}</td>
+                <td>${population.averageAge}</td>
+            </tr>
+        </g:each>
     </table>
 </div>
 
